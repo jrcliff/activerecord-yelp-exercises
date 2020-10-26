@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_10_26_160137) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
+    t.integer "tag_id"
     t.integer "restaurant_id"
   end
 
@@ -24,11 +25,11 @@ ActiveRecord::Schema.define(version: 2020_10_26_160137) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.integer "dish_id"
   end
 
   create_table "tags", force: :cascade do |t|
     t.string "name"
+    t.integer "dish_id"
   end
 
 end
